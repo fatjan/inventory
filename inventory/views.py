@@ -1,7 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 import requests
 from requests.exceptions import RequestException
 from .models import Inventory
+
+def home_redirect(request):
+    return redirect('inventory_list')
 
 def inventory_list(request):
     name = request.GET.get('name', '')
