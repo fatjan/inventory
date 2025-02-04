@@ -7,7 +7,10 @@ A Django-based web application designed for inventory management.
 ## Features
 
 - /inventory will display the list of inventories and their suppliers
-    - can search inventory by name or supplier name
+    - can search inventory by name, supplier_name and/or availability, example:
+    - http://127.0.0.1:8000/inventory/?name=pens
+    - http://127.0.0.1:8000/inventory/?supplier_name=siemens
+    - http://127.0.0.1:8000/inventory/?availability=true
 - /inventory/id to display inventory detail
 
 ## Requirements
