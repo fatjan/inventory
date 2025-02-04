@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Details - {{ inventory.name }}</title>
+    <style>
+        /* Add some styling to make the page look nice */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .details {
+            margin-bottom: 20px;
+        }
+        .details p {
+            font-size: 1.1em;
+        }
+        .details .availability {
+            font-weight: bold;
+            color: {% if inventory.availability %} green {% else %} red {% endif %};
+        }
+        .back-link {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Inventory Details</h1>
+
+    <div class="container">
+        <div class="details">
+            <h2><strong>Name:</strong> {{ inventory.name }}</h2>
+            <p><strong>Supplier:</strong> {{ inventory.supplier.name }}</p>
+            <p><strong>Description:</strong> {{ inventory.description }}</p>
+            <p><strong>Note:</strong> {{ inventory.note }}</p>
+            <p><strong>Stock:</strong> {{ inventory.stock }}</p>
+            <p><strong>Availability:</strong> <span class="availability">{% if inventory.availability %}Available{% else %}Not Available{% endif %}</span></p>
+        </div>
+
+        <a href="{% url 'inventory_list' %}" class="back-link">Back to Inventory List</a>
+    </div>
+
+</body>
+</html>
