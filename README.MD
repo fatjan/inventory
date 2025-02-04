@@ -57,6 +57,8 @@ python manage.py runserver
 
 Your app will be accessible at http://127.0.0.1:8000/
 
+7.1 Add required data on supplier and inventory on admin panel: http://127.0.0.1:8000/admin
+
 8. Testing
 To run tests for the app, use the following command:
 ```
