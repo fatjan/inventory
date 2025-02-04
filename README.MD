@@ -61,7 +61,7 @@ python manage.py runserver
 Your app will be accessible at http://127.0.0.1:8000/
 
 9. Testing
-To run tests for your app, use the following command:
+To run tests for the app, use the following command:
 ```
 python manage.py test
 ```
