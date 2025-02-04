@@ -39,34 +39,31 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. Set up environment variables:
-Copy the .env.example and paste it as .env file, fill in the required fields
-
-6. Run migrations
+5. Run migrations
 ```
 python manage.py migrate
 ```
 
-7. Create a superuser (for admin access):
+6. Create a superuser (for admin access):
 ```
 python manage.py createsuperuser
 ```
 Follow the prompts to create an admin user for accessing the Django admin panel.
 
-8. Run the development server:
+7. Run the development server:
 ```
 python manage.py runserver
 ```
 
 Your app will be accessible at http://127.0.0.1:8000/
 
-9. Testing
+8. Testing
 To run tests for the app, use the following command:
 ```
 python manage.py test
 ```
 
-10. If any new package or dependency is installed, add it to the requirements.txt
+9. If any new package or dependency is installed, add it to the requirements.txt
 ```
 pip freeze > requirements.txt
 ```
