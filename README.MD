@@ -65,3 +65,8 @@ To run tests for your app, use the following command:
 ```
 python manage.py test
 ```
+
+10. If any new package or dependency is installed, add it to the requirements.txt
+```
+pip freeze > requirements.txt
+```
