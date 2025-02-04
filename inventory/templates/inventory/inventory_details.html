@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +46,9 @@
 <body>
 
     <h1>Inventory Details</h1>
+
+    <!-- Thumbnail Image -->
+    <img src="{% static 'images/placeholder-thumbnail.jpg' %}" alt="Thumbnail for {{ inventory.name }}" width="200">
 
     <div class="container">
         <div class="details">
